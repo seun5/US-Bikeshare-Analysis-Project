@@ -121,7 +121,7 @@ def popular_month(time_period, reader):
         a = datetime.strptime(read['Start Time'], "%Y-%m-%d %H:%M:%S").month
         popular[a] += 1
     ans = month_list[max(popular, key=popular.get) - 1]
-    print("Popular month: " + ans)
+    print("Popular Month: " + ans)
 
 
 def popular_day(time_period, reader):
@@ -146,7 +146,7 @@ def popular_day(time_period, reader):
         a = datetime.strptime(read['Start Time'], "%Y-%m-%d %H:%M:%S").weekday()
         popular[a] += 1
     ans = day_list[max(popular, key=popular.get)]
-    print("Popular weekday: {}".format(weekday[int(ans)]))
+    print("Popular Weekday: {}".format(weekday[int(ans)]))
 
 
 def popular_hour(time_period, reader):
@@ -175,7 +175,7 @@ def popular_hour(time_period, reader):
 
     ans = max(popular, key=popular.get)
 
-    print(str(ans) + ":00")
+    print("Popular Start Hour: "+str(ans) + ":00")
 
 
 def trip_duration(time_period, reader):
